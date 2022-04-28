@@ -593,22 +593,13 @@ ul.pagination {
   li.active a {
     font-weight: 600;
   }
-  button {
-    width: 100%;
-    text-align: start;
-  }
-  li.border-bottom {
-    border-bottom: 1px solid #DDD;
-  }
-  li hr {
-    margin: $-xs 0;
-  }
-  .icon-item, .text-item, .label-item {
-    padding: 8px $-m;
+  a, button {
+    display: block;
+    padding: $-xs $-m;
     @include lightDark(color, #555, #eee);
     fill: currentColor;
     white-space: nowrap;
-    line-height: 1.4;
+    line-height: 1.6;
     cursor: pointer;
     &:hover, &:focus {
       text-decoration: none;
@@ -625,30 +616,15 @@ ul.pagination {
       width: 16px;
     }
   }
-  .text-item {
-    display: block;
+  button {
+    width: 100%;
+    text-align: start;
   }
-  .label-item {
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto min-content;
-    gap: $-m;
+  li.border-bottom {
+    border-bottom: 1px solid #DDD;
   }
-  .label-item > *:nth-child(2) {
-    opacity: 0.7;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .icon-item {
-    display: grid;
-    align-items: start;
-    grid-template-columns: 16px auto;
-    gap: $-m;
-    svg {
-      margin-inline-end: 0;
-      margin-block-start: 1px;
-    }
+  li hr {
+    margin: $-xs 0;
   }
 }
 
@@ -701,21 +677,11 @@ ul.pagination {
     padding: $-s;
   }
   a:not(.active) {
-    @include lightDark(color, #444, #888);
+    @include lightDark(color, #444, #666);
   }
   a:hover {
     @include lightDark(background-color, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.05));
-    border-radius: 4px;
+    border-radius: 3px;
     text-decoration: none;
-  }
-  &.in-sidebar {
-    a {
-      display: block;
-      margin-bottom: $-xs;
-    }
-    a.active {
-      border-radius: 4px;
-      @include lightDark(background-color, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.05));
-    }
   }
 }

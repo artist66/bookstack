@@ -21,7 +21,7 @@ use League\HTMLToMarkdown\HtmlConverter;
 
 class HtmlToMarkdown
 {
-    protected string $html;
+    protected $html;
 
     public function __construct(string $html)
     {
@@ -87,7 +87,6 @@ class HtmlToMarkdown
         $environment->addConverter(new CustomParagraphConverter());
         $environment->addConverter(new PreformattedConverter());
         $environment->addConverter(new TextConverter());
-        $environment->addConverter(new CheckboxConverter());
 
         return $environment;
     }

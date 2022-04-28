@@ -10,8 +10,6 @@ return [
     'settings' => 'Nustatymai',
     'settings_save' => 'Išsaugoti nustatymus',
     'settings_save_success' => 'Nustatymai išsaugoti',
-    'system_version' => 'System Version',
-    'categories' => 'Categories',
 
     // App Settings
     'app_customization' => 'Tinkinimas',
@@ -277,7 +275,6 @@ return [
         'es' => 'Español',
         'es_AR' => 'Español Argentina',
         'et' => 'Eesti keel',
-        'eu' => 'Euskara',
         'fr' => 'Français',
         'he' => 'עברית',
         'hr' => 'Hrvatski',

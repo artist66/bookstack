@@ -4,7 +4,9 @@
 
     <div class="container small">
 
-        @include('settings.parts.navbar', ['selected' => 'users'])
+        <div class="py-m">
+            @include('settings.parts.navbar', ['selected' => 'users'])
+        </div>
 
         <main class="card content-wrap">
             <h1 class="list-heading">{{ trans('settings.users_add_new') }}</h1>

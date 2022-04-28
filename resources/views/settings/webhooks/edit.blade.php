@@ -3,7 +3,9 @@
 @section('body')
 
     <div class="container small">
-        @include('settings.parts.navbar', ['selected' => 'webhooks'])
+        <div class="py-m">
+            @include('settings.parts.navbar', ['selected' => 'webhooks'])
+        </div>
 
         <div class="card content-wrap auto-height">
             <h1 class="list-heading">{{ trans('settings.webhooks_edit') }}</h1>

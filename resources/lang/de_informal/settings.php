@@ -10,8 +10,6 @@ return [
     'settings' => 'Einstellungen',
     'settings_save' => 'Einstellungen speichern',
     'settings_save_success' => 'Einstellungen gespeichert',
-    'system_version' => 'Systemversion',
-    'categories' => 'Kategorien',
 
     // App Settings
     'app_customization' => 'Personalisierung',
@@ -280,7 +278,6 @@ Hinweis: Benutzer können ihre E-Mail Adresse nach erfolgreicher Registrierung �
         'es' => 'Spanisch',
         'es_AR' => 'Spanisch Argentinisch',
         'et' => 'Estnisch',
-        'eu' => 'Euskara',
         'fr' => 'Französisch',
         'he' => 'עברית',
         'hr' => 'Kroatisch',

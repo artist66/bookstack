@@ -10,7 +10,6 @@ use BookStack\Entities\Models\Page;
 use BookStack\Entities\Models\PageRevision;
 use BookStack\Entities\Tools\BookContents;
 use BookStack\Entities\Tools\PageContent;
-use BookStack\Entities\Tools\PageEditorData;
 use BookStack\Entities\Tools\TrashCan;
 use BookStack\Exceptions\MoveOperationException;
 use BookStack\Exceptions\NotFoundException;
@@ -218,24 +217,10 @@ class PageRepo
         }
 
         $pageContent = new PageContent($page);
-        $currentEditor = $page->editor ?: PageEditorData::getSystemDefaultEditor();
-        $newEditor = $currentEditor;
-
-        $haveInput = isset($input['markdown']) || isset($input['html']);
-        $inputEmpty = empty($input['markdown']) && empty($input['html']);
-
-        if ($haveInput && $inputEmpty) {
-            $pageContent->setNewHTML('');
-        } elseif (!empty($input['markdown']) && is_string($input['markdown'])) {
-            $newEditor = 'markdown';
+        if (!empty($input['markdown'] ?? '')) {
             $pageContent->setNewMarkdown($input['markdown']);
         } elseif (isset($input['html'])) {
-            $newEditor = 'wysiwyg';
             $pageContent->setNewHTML($input['html']);
-        }
-
-        if ($newEditor !== $currentEditor && userCan('editor-change')) {
-            $page->editor = $newEditor;
         }
     }
 
@@ -244,12 +229,8 @@ class PageRepo
      */
     protected function savePageRevision(Page $page, string $summary = null): PageRevision
     {
-        $revision = new PageRevision();
+        $revision = new PageRevision($page->getAttributes());
 
-        $revision->name = $page->name;
-        $revision->html = $page->html;
-        $revision->markdown = $page->markdown;
-        $revision->text = $page->text;
         $revision->page_id = $page->id;
         $revision->slug = $page->slug;
         $revision->book_slug = $page->book->slug;
@@ -279,15 +260,10 @@ class PageRepo
             return $page;
         }
 
-        // Otherwise, save the data to a revision
+        // Otherwise save the data to a revision
         $draft = $this->getPageRevisionToUpdate($page);
         $draft->fill($input);
-
-        if (!empty($input['markdown'])) {
-            $draft->markdown = $input['markdown'];
-            $draft->html = '';
-        } else {
-            $draft->html = $input['html'];
+        if (setting('app-editor') !== 'markdown') {
             $draft->markdown = '';
         }
 

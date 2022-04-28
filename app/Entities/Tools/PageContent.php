@@ -3,8 +3,11 @@
 namespace BookStack\Entities\Tools;
 
 use BookStack\Entities\Models\Page;
-use BookStack\Entities\Tools\Markdown\MarkdownToHtml;
+use BookStack\Entities\Tools\Markdown\CustomListItemRenderer;
+use BookStack\Entities\Tools\Markdown\CustomStrikeThroughExtension;
 use BookStack\Exceptions\ImageUploadException;
+use BookStack\Facades\Theme;
+use BookStack\Theming\ThemeEvents;
 use BookStack\Uploads\ImageRepo;
 use BookStack\Uploads\ImageService;
 use BookStack\Util\HtmlContentFilter;
@@ -14,10 +17,15 @@ use DOMNode;
 use DOMNodeList;
 use DOMXPath;
 use Illuminate\Support\Str;
+use League\CommonMark\Block\Element\ListItem;
+use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment;
+use League\CommonMark\Extension\Table\TableExtension;
+use League\CommonMark\Extension\TaskList\TaskListExtension;
 
 class PageContent
 {
-    protected Page $page;
+    protected $page;
 
     /**
      * PageContent constructor.
@@ -45,9 +53,26 @@ class PageContent
     {
         $markdown = $this->extractBase64ImagesFromMarkdown($markdown);
         $this->page->markdown = $markdown;
-        $html = (new MarkdownToHtml($markdown))->convert();
+        $html = $this->markdownToHtml($markdown);
         $this->page->html = $this->formatHtml($html);
         $this->page->text = $this->toPlainText();
+    }
+
+    /**
+     * Convert the given Markdown content to a HTML string.
+     */
+    protected function markdownToHtml(string $markdown): string
+    {
+        $environment = Environment::createCommonMarkEnvironment();
+        $environment->addExtension(new TableExtension());
+        $environment->addExtension(new TaskListExtension());
+        $environment->addExtension(new CustomStrikeThroughExtension());
+        $environment = Theme::dispatch(ThemeEvents::COMMONMARK_ENVIRONMENT_CONFIGURE, $environment) ?? $environment;
+        $converter = new CommonMarkConverter([], $environment);
+
+        $environment->addBlockRenderer(ListItem::class, new CustomListItemRenderer(), 10);
+
+        return $converter->convertToHtml($markdown);
     }
 
     /**

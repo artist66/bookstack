@@ -10,8 +10,6 @@ return [
     'settings' => 'Cài đặt',
     'settings_save' => 'Lưu Cài đặt',
     'settings_save_success' => 'Đã lưu cài đặt',
-    'system_version' => 'System Version',
-    'categories' => 'Categories',
 
     // App Settings
     'app_customization' => 'Tuỳ biến',
@@ -277,7 +275,6 @@ return [
         'es' => 'Español',
         'es_AR' => 'Español Argentina',
         'et' => 'Eesti keel',
-        'eu' => 'Euskara',
         'fr' => 'Français',
         'he' => 'עברית',
         'hr' => 'Hrvatski',

@@ -10,8 +10,6 @@ return [
     'settings' => 'تنظیمات',
     'settings_save' => 'تنظیمات را ذخیره کن',
     'settings_save_success' => 'تنظیمات ذخیره شد',
-    'system_version' => 'System Version',
-    'categories' => 'Categories',
 
     // App Settings
     'app_customization' => 'سفارشی سازی',
@@ -277,7 +275,6 @@ return [
         'es' => 'Español',
         'es_AR' => 'Español Argentina',
         'et' => 'Eesti keel',
-        'eu' => 'Euskara',
         'fr' => 'Français',
         'he' => 'עברית',
         'hr' => 'Hrvatski',

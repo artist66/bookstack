@@ -10,8 +10,6 @@ return [
     'settings' => 'הגדרות',
     'settings_save' => 'שמור הגדרות',
     'settings_save_success' => 'ההגדרות נשמרו',
-    'system_version' => 'System Version',
-    'categories' => 'Categories',
 
     // App Settings
     'app_customization' => 'התאמה אישית',
@@ -94,7 +92,7 @@ return [
     'recycle_bin' => 'סל המיחזור',
     'recycle_bin_desc' => 'כאן תוכלו לאחזר פריטים שנמחקו או לבחור למחוק אותם מהמערכת לצמיתות. רשימה זו לא מסוננת, בשונה מרשימות פעילות דומות במערכת, בהן מוחלים מסנני הרשאות.',
     'recycle_bin_deleted_item' => 'פריט שנמחק',
-    'recycle_bin_deleted_parent' => 'הורה',
+    'recycle_bin_deleted_parent' => 'Parent',
     'recycle_bin_deleted_by' => 'נמחק על ידי',
     'recycle_bin_deleted_at' => 'זמן המחיקה',
     'recycle_bin_permanently_delete' => 'מחק לצמיתות',
@@ -277,7 +275,6 @@ return [
         'es' => 'Español',
         'es_AR' => 'Español Argentina',
         'et' => 'Eesti keel',
-        'eu' => 'Euskara',
         'fr' => 'Français',
         'he' => 'עברית',
         'hr' => 'Hrvatski',

@@ -39,14 +39,14 @@ return [
     'reset' => 'Нулирай',
     'remove' => 'Премахване',
     'add' => 'Добави',
-    'configure' => 'Конфигурирай',
+    'configure' => 'Configure',
     'fullscreen' => 'Пълен екран',
-    'favourite' => 'Добави в любими',
-    'unfavourite' => 'Премахни от любими',
-    'next' => 'Следващ',
-    'previous' => 'Предишен',
-    'filter_active' => 'Активен филтър:',
-    'filter_clear' => 'Изчисти филтъра',
+    'favourite' => 'Favourite',
+    'unfavourite' => 'Unfavourite',
+    'next' => 'Next',
+    'previous' => 'Previous',
+    'filter_active' => 'Active Filter:',
+    'filter_clear' => 'Clear Filter',
 
     // Sort Options
     'sort_options' => 'Опции за сортиране',
@@ -54,7 +54,7 @@ return [
     'sort_ascending' => 'Сортирай възходящо',
     'sort_descending' => 'Низходящо сортиране',
     'sort_name' => 'Име',
-    'sort_default' => 'По подразбиране',
+    'sort_default' => 'Default',
     'sort_created_at' => 'Дата на създаване',
     'sort_updated_at' => 'Дата на обновяване',
 
@@ -63,7 +63,7 @@ return [
     'no_activity' => 'Няма активност за показване',
     'no_items' => 'Няма налични артикули',
     'back_to_top' => 'Върнете се в началото',
-    'skip_to_main_content' => 'Прескочи към основното съдържание',
+    'skip_to_main_content' => 'Skip to main content',
     'toggle_details' => 'Активирай детайли',
     'toggle_thumbnails' => 'Активирай миниатюри',
     'details' => 'Подробности',
@@ -71,14 +71,14 @@ return [
     'list_view' => 'Изглед списък',
     'default' => 'Основен',
     'breadcrumb' => 'Трасиране',
-    'status' => 'Статус',
-    'status_active' => 'Активен',
-    'status_inactive' => 'Неактивен',
-    'never' => 'Никога',
-    'none' => 'Няма',
+    'status' => 'Status',
+    'status_active' => 'Active',
+    'status_inactive' => 'Inactive',
+    'never' => 'Never',
+    'none' => 'None',
 
     // Header
-    'header_menu_expand' => 'Разшири заглавното меню',
+    'header_menu_expand' => 'Expand Header Menu',
     'profile_menu' => 'Профил меню',
     'view_profile' => 'Разглеждане на профил',
     'edit_profile' => 'Редактиране на профила',
@@ -87,9 +87,9 @@ return [
 
     // Layout tabs
     'tab_info' => 'Информация',
-    'tab_info_label' => 'Таб: Покажи вторична информация',
+    'tab_info_label' => 'Tab: Show Secondary Information',
     'tab_content' => 'Съдържание',
-    'tab_content_label' => 'Таб: Покажи първично съдържание',
+    'tab_content_label' => 'Tab: Show Primary Content',
 
     // Email Content
     'email_action_help' => 'Ако имате проблеми с бутона ":actionText" по-горе, копирайте и поставете URL адреса по-долу в уеб браузъра си:',

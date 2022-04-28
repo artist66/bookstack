@@ -24,7 +24,6 @@ return [
     'width' => 'Breite',
     'height' => 'Höhe',
     'More' => 'Mehr',
-    'select' => 'Auswählen...',
 
     // Toolbar
     'formats' => 'Formate',
@@ -56,7 +55,6 @@ return [
     'align_justify' => 'Blocksatz',
     'list_bullet' => 'Liste',
     'list_numbered' => 'Nummerierte Liste',
-    'list_task' => 'Aufgabenliste',
     'indent_increase' => 'Einzug vergrößern',
     'indent_decrease' => 'Einzug verkleinern',
     'table' => 'Tabelle',
@@ -93,10 +91,7 @@ return [
     'cell_properties_title' => 'Zelleneigenschaften',
     'cell_type' => 'Zellentyp',
     'cell_type_cell' => 'Zelle',
-    'cell_scope' => 'Zellbereich',
     'cell_type_header' => 'Tabellen-Kopfzelle',
-    'merge_cells' => 'Zellen verbinden',
-    'split_cell' => 'Zellen teilen',
     'table_row_group' => 'Zeilengruppe',
     'table_column_group' => 'Spaltengruppe',
     'horizontal_align' => 'Horizontal ausrichten',
@@ -124,16 +119,6 @@ return [
     'caption' => 'Beschriftung',
     'show_caption' => 'Beschriftungen anzeigen',
     'constrain' => 'Proportionen beschränken',
-    'cell_border_solid' => 'Voll',
-    'cell_border_dotted' => 'Gepunktet',
-    'cell_border_dashed' => 'Gestrichelt',
-    'cell_border_double' => 'Doppelt',
-    'cell_border_groove' => 'Rille',
-    'cell_border_ridge' => 'Erhaben',
-    'cell_border_inset' => 'vertiefte Fläche',
-    'cell_border_outset' => 'erhabene Fläche',
-    'cell_border_none' => 'Keine',
-    'cell_border_hidden' => 'Versteckt',
 
     // Images, links, details/summary & embed
     'source' => 'Quelle',
@@ -154,14 +139,12 @@ return [
     'toggle_label' => 'Label umschalten',
 
     // About view
-    'about' => 'Über den Editor',
     'about_title' => 'Über den WYSIWYG-Editor',
     'editor_license' => 'Editorlizenz & Copyright',
     'editor_tiny_license' => 'Dieser Editor wird unter der LGPL v2.1 Lizenz entwickelt, welche hier zu finden ist :tinyLink.',
     'editor_tiny_license_link' => 'Die Copyright- und Lizenzdetails von TinyMCE finden Sie hier.',
     'save_continue' => 'Speichern & Fortfahren',
     'callouts_cycle' => '(Drücken Sie weiter, um durch Typen umzuschalten)',
-    'link_selector' => 'Inhalt verlinken',
     'shortcuts' => 'Verknüpfungen',
     'shortcut' => 'Verknüpfung',
     'shortcuts_intro' => 'Die folgenden Verknüpfungen sind im Editor verfügbar:',

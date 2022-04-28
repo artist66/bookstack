@@ -8,13 +8,13 @@ class FooterLinksTest extends TestCase
 {
     public function test_saving_setting()
     {
-        $resp = $this->asAdmin()->post('/settings/customization', [
+        $resp = $this->asAdmin()->post('/settings', [
             'setting-app-footer-links' => [
                 ['label' => 'My custom link 1', 'url' => 'https://example.com/1'],
                 ['label' => 'My custom link 2', 'url' => 'https://example.com/2'],
             ],
         ]);
-        $resp->assertRedirect('/settings/customization');
+        $resp->assertRedirect('/settings');
 
         $result = setting('app-footer-links');
         $this->assertIsArray($result);
@@ -30,7 +30,7 @@ class FooterLinksTest extends TestCase
             ['label' => 'Another Link', 'url' => 'https://example.com/link-b'],
         ]]);
 
-        $resp = $this->asAdmin()->get('/settings/customization');
+        $resp = $this->asAdmin()->get('/settings');
         $resp->assertSee('value="My custom link"', false);
         $resp->assertSee('value="Another Link"', false);
         $resp->assertSee('value="https://example.com/link-a"', false);

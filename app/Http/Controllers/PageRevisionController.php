@@ -124,8 +124,11 @@ class PageRevisionController extends Controller
             throw new NotFoundException("Revision #{$revId} not found");
         }
 
-        // Check if it's the latest revision, cannot delete the latest revision.
-        if (intval($page->currentRevision->id ?? null) === intval($revId)) {
+        // Get the current revision for the page
+        $currentRevision = $page->getCurrentRevision();
+
+        // Check if its the latest revision, cannot delete latest revision.
+        if (intval($currentRevision->id) === intval($revId)) {
             $this->showErrorNotification(trans('entities.revision_cannot_delete_latest'));
 
             return redirect($page->getUrl('/revisions'));

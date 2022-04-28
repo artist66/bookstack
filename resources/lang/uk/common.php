@@ -71,11 +71,11 @@ return [
     'list_view' => 'Вигляд Списком',
     'default' => 'За замовчуванням',
     'breadcrumb' => 'Навігація',
-    'status' => 'Стан',
-    'status_active' => 'Активний',
-    'status_inactive' => 'Неактивний',
-    'never' => 'Ніколи',
-    'none' => 'Відсутньо',
+    'status' => 'Status',
+    'status_active' => 'Active',
+    'status_inactive' => 'Inactive',
+    'never' => 'Never',
+    'none' => 'None',
 
     // Header
     'header_menu_expand' => 'Розгорнути меню заголовка',

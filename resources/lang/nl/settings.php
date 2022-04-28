@@ -10,8 +10,6 @@ return [
     'settings' => 'Instellingen',
     'settings_save' => 'Instellingen opslaan',
     'settings_save_success' => 'Instellingen Opgeslagen',
-    'system_version' => 'Systeem versie',
-    'categories' => 'Categorieën',
 
     // App Settings
     'app_customization' => 'Aanpassingen',
@@ -209,7 +207,7 @@ return [
     'users_api_tokens_docs' => 'API Documentatie',
     'users_mfa' => 'Meervoudige Verificatie',
     'users_mfa_desc' => 'Stel meervoudige verificatie in als extra beveiligingslaag voor uw gebruikersaccount.',
-    'users_mfa_x_methods' => ':count methode geconfigureerd|:count methoden geconfigureerd',
+    'users_mfa_x_methods' => ':count methode geconfigureerd :count methoden geconfigureerd',
     'users_mfa_configure' => 'Configureer methoden',
 
     // API Tokens
@@ -277,7 +275,6 @@ return [
         'es' => 'Español (Spaans)',
         'es_AR' => 'Español Argentina (Argentijns Spaans)',
         'et' => 'Eesti keel (Estisch)',
-        'eu' => 'Euskara',
         'fr' => 'Français (Frans)',
         'he' => 'עברית (Hebreeuws)',
         'hr' => 'Hrvatski (Kroatisch)',

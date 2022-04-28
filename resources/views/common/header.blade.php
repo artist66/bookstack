@@ -62,36 +62,26 @@
                         </span>
                         <ul refs="dropdown@menu" class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{{ url('/favourites') }}" class="icon-item">
-                                    @icon('star')
-                                    <div>{{ trans('entities.my_favourites') }}</div>
-                                </a>
+                                <a href="{{ url('/favourites') }}">@icon('star'){{ trans('entities.my_favourites') }}</a>
                             </li>
                             <li>
-                                <a href="{{ $currentUser->getProfileUrl() }}" class="icon-item">
-                                    @icon('user')
-                                    <div>{{ trans('common.view_profile') }}</div>
-                                </a>
+                                <a href="{{ $currentUser->getProfileUrl() }}">@icon('user'){{ trans('common.view_profile') }}</a>
                             </li>
                             <li>
-                                <a href="{{ $currentUser->getEditUrl() }}" class="icon-item">
-                                    @icon('edit')
-                                    <div>{{ trans('common.edit_profile') }}</div>
-                                </a>
+                                <a href="{{ $currentUser->getEditUrl() }}">@icon('edit'){{ trans('common.edit_profile') }}</a>
                             </li>
                             <li>
                                 <form action="{{ url(config('auth.method') === 'saml2' ? '/saml2/logout' : '/logout') }}"
                                       method="post">
                                     {{ csrf_field() }}
-                                    <button class="icon-item">
-                                        @icon('logout')
-                                        <div>{{ trans('auth.logout') }}</div>
+                                    <button class="text-muted icon-list-item text-primary">
+                                        @icon('logout'){{ trans('auth.logout') }}
                                     </button>
                                 </form>
                             </li>
                             <li><hr></li>
                             <li>
-                                @include('common.dark-mode-toggle', ['classes' => 'icon-item'])
+                                @include('common.dark-mode-toggle')
                             </li>
                         </ul>
                     </div>

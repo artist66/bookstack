@@ -3,7 +3,9 @@
 @section('body')
     <div class="container small">
 
-        @include('settings.parts.navbar', ['selected' => 'users'])
+        <div class="py-m">
+            @include('settings.parts.navbar', ['selected' => 'users'])
+        </div>
 
         <section class="card content-wrap">
             <h1 class="list-heading">{{ $user->id === user()->id ? trans('settings.users_edit_profile') : trans('settings.users_edit') }}</h1>

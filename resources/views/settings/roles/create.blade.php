@@ -4,7 +4,9 @@
 
     <div class="container small">
 
-        @include('settings.parts.navbar', ['selected' => 'roles'])
+        <div class="py-m">
+            @include('settings.parts.navbar', ['selected' => 'roles'])
+        </div>
 
         <div class="card content-wrap">
             <h1 class="list-heading">{{ trans('settings.role_create') }}</h1>

@@ -10,8 +10,6 @@ return [
     'settings' => 'Configuració',
     'settings_save' => 'Desa la configuració',
     'settings_save_success' => 'S\'ha desat la configuració',
-    'system_version' => 'System Version',
-    'categories' => 'Categories',
 
     // App Settings
     'app_customization' => 'Personalització',
@@ -277,7 +275,6 @@ return [
         'es' => 'Español',
         'es_AR' => 'Español Argentina',
         'et' => 'Eesti keel',
-        'eu' => 'Euskara',
         'fr' => 'Français',
         'he' => 'עברית',
         'hr' => 'Hrvatski',

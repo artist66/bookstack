@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
 class PageApiController extends ApiController
 {
-    protected PageRepo $pageRepo;
+    protected $pageRepo;
 
     protected $rules = [
         'create' => [
@@ -24,8 +24,8 @@ class PageApiController extends ApiController
             'tags'       => ['array'],
         ],
         'update' => [
-            'book_id'    => ['integer'],
-            'chapter_id' => ['integer'],
+            'book_id'    => ['required', 'integer'],
+            'chapter_id' => ['required', 'integer'],
             'name'       => ['string', 'min:1', 'max:255'],
             'html'       => ['string'],
             'markdown'   => ['string'],
@@ -103,8 +103,6 @@ class PageApiController extends ApiController
      */
     public function update(Request $request, string $id)
     {
-        $requestData = $this->validate($request, $this->rules['update']);
-
         $page = $this->pageRepo->getById($id, []);
         $this->checkOwnablePermission('page-update', $page);
 
@@ -129,7 +127,7 @@ class PageApiController extends ApiController
             }
         }
 
-        $updatedPage = $this->pageRepo->update($page, $requestData);
+        $updatedPage = $this->pageRepo->update($page, $request->all());
 
         return response()->json($updatedPage->forJsonDisplay());
     }

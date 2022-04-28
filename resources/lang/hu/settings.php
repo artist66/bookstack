@@ -10,8 +10,6 @@ return [
     'settings' => 'Beállítások',
     'settings_save' => 'Beállítások mentése',
     'settings_save_success' => 'Beállítások elmentve',
-    'system_version' => 'System Version',
-    'categories' => 'Categories',
 
     // App Settings
     'app_customization' => 'Személyre szabás',
@@ -277,7 +275,6 @@ return [
         'es' => 'Español',
         'es_AR' => 'Español Argentina',
         'et' => 'Eesti keel',
-        'eu' => 'Euskara',
         'fr' => 'Français',
         'he' => 'עברית',
         'hr' => 'Hrvatski',

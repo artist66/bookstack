@@ -10,8 +10,6 @@ return [
     'settings' => 'Impostazioni',
     'settings_save' => 'Salva Impostazioni',
     'settings_save_success' => 'Impostazioni salvate',
-    'system_version' => 'Versione Del Sistema',
-    'categories' => 'Categorie',
 
     // App Settings
     'app_customization' => 'Personalizzazione',
@@ -277,7 +275,6 @@ return [
         'es' => 'Spagnolo',
         'es_AR' => 'Spagnolo d\'Argentina',
         'et' => 'Estone',
-        'eu' => 'Euskara',
         'fr' => 'Francese',
         'he' => 'Ebraico',
         'hr' => 'Croato',
