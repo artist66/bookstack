@@ -3,12 +3,8 @@
 
         <div>
             <a href="{{ url('/') }}" class="logo">
-                @if(setting('app-logo', '') !== 'none')
-                    <img class="logo-image" src="{{ setting('app-logo', '') === '' ? url('/logo.png') : url(setting('app-logo', '')) }}" alt="Logo">
-                @endif
-                @if (setting('app-name-header'))
-                    <span class="logo-text">{{ setting('app-name') }}</span>
-                @endif
+                    <img class="logo-image" src="{{url('/sce-logo-2.png')}}" alt="星火编辑器">
+                    <!-- <span class="logo-text">{{ setting('app-name') }}</span> -->
             </a>
             <button type="button"
                     refs="header-mobile-toggle@toggle"
