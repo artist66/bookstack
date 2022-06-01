@@ -2,10 +2,12 @@
 
 @push('social-meta')
     <meta property="og:description" content="{{ Str::limit($page->text, 100, '...') }}">
+    <script nonce="{{ $cspNonce }}">
+        window.history.pushState("", "", "{{ url('/') }}/link/{{ $page->id }}");
+    </script>
 @endpush
 
 @section('body')
-
     <div class="mb-m print-hidden">
         @include('entities.breadcrumbs', ['crumbs' => [
             $page->book,

@@ -26,22 +26,22 @@ return [
     'chapter_move'                => '移动了章节',
 
     // Books
-    'book_create'                 => '创建了图书',
-    'book_create_notification'    => '图书已成功创建',
-    'book_update'                 => '更新了图书',
-    'book_update_notification'    => '图书已成功更新',
-    'book_delete'                 => '删除了图书',
-    'book_delete_notification'    => '图书已成功删除',
-    'book_sort'                   => '排序了图书',
-    'book_sort_notification'      => '图书已成功重新排序',
+    'book_create'                 => '创建了文档',
+    'book_create_notification'    => '文档已成功创建',
+    'book_update'                 => '更新了文档',
+    'book_update_notification'    => '文档已成功更新',
+    'book_delete'                 => '删除了文档',
+    'book_delete_notification'    => '文档已成功删除',
+    'book_sort'                   => '排序了文档',
+    'book_sort_notification'      => '文档已成功重新排序',
 
     // Bookshelves
-    'bookshelf_create'            => '创建了书架',
-    'bookshelf_create_notification'    => '书架已成功创建',
-    'bookshelf_update'                 => '更新了书架',
-    'bookshelf_update_notification'    => '书架已成功更新',
-    'bookshelf_delete'                 => '删除了书架',
-    'bookshelf_delete_notification'    => '书架已成功删除',
+    'bookshelf_create'            => '创建了合集',
+    'bookshelf_create_notification'    => '合集已成功创建',
+    'bookshelf_update'                 => '更新了合集',
+    'bookshelf_update_notification'    => '合集已成功更新',
+    'bookshelf_delete'                 => '删除了合集',
+    'bookshelf_delete_notification'    => '合集已成功删除',
 
     // Favourites
     'favourite_add_notification' => '":name" 已添加到您的收藏',

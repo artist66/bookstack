@@ -29,12 +29,10 @@
                 <div class="links text-center">
                     @if (hasAppAccess())
                         <a class="hide-over-l" href="{{ url('/search') }}">@icon('search'){{ trans('common.search') }}</a>
-                        @if(userCanOnAny('view', \BookStack\Entities\Models\Bookshelf::class) || userCan('bookshelf-view-all') || userCan('bookshelf-view-own'))
-                            <a href="{{ url('/shelves') }}">@icon('bookshelf'){{ trans('entities.shelves') }}</a>
-                        @endif
-                        <a href="{{ url('/books') }}">@icon('books'){{ trans('entities.books') }}</a>
+                        <a href="{{ url('/shelves/8efb1') }}"><img src="{{ url('/nav-icon-manual.png') }}"/><span>功能手册</span></a>
+                        <a href="{{ url('/shelves/a5bfc') }}"><img src="{{ url('/nav-icon-dev.png') }}"/><span>技术文档</span></a>
                         @if(signedInUser() && userCan('settings-manage'))
-                            <a href="{{ url('/settings') }}">@icon('settings'){{ trans('settings.settings') }}</a>
+                            <a href="{{ url('/settings') }}"><img src="{{ url('/nav-icon-settings.png') }}"/><span>{{ trans('settings.settings') }}</span></a>
                         @endif
                         @if(signedInUser() && userCan('users-manage') && !userCan('settings-manage'))
                             <a href="{{ url('/settings/users') }}">@icon('users'){{ trans('settings.users') }}</a>
@@ -43,9 +41,9 @@
 
                     @if(!signedInUser())
                         @if(setting('registration-enabled') && config('auth.method') === 'standard')
-                            <a href="{{ url('/register') }}">@icon('new-user'){{ trans('auth.sign_up') }}</a>
+                            <a href="{{ url('/register') }}"><img src="{{ url('/nav-icon-register.png') }}"/><span>{{ trans('auth.sign_up') }}</span></a>
                         @endif
-                        <a href="{{ url('/login')  }}">@icon('login'){{ trans('auth.log_in') }}</a>
+                        <a href="{{ url('/login')  }}"><img src="{{ url('/nav-icon-login.png') }}"/><span>{{ trans('auth.log_in') }}</span></a>
                     @endif
                 </div>
                 @if(signedInUser())
@@ -54,7 +52,7 @@
                         <span class="user-name py-s hide-under-l" refs="dropdown@toggle"
                               aria-haspopup="true" aria-expanded="false" aria-label="{{ trans('common.profile_menu') }}" tabindex="0">
                             <img class="avatar" src="{{$currentUser->getAvatar(30)}}" alt="{{ $currentUser->name }}">
-                            <span class="name">{{ $currentUser->getShortName(9) }}</span> @icon('caret-down')
+                            <span class="name">{{ $currentUser->getShortName(9) }}</span>
                         </span>
                         <ul refs="dropdown@menu" class="dropdown-menu" role="menu">
                             <li>

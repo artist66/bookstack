@@ -58,12 +58,12 @@ return [
 
     // Entities
     'entity_not_found' => '未找到实体',
-    'bookshelf_not_found' => '未找到书架',
-    'book_not_found' => '未找到图书',
+    'bookshelf_not_found' => '未找到合集',
+    'book_not_found' => '未找到文档',
     'page_not_found' => '未找到页面',
     'chapter_not_found' => '未找到章节',
     'selected_book_not_found' => '选中的书未找到',
-    'selected_book_chapter_not_found' => '未找到所选的图书或章节',
+    'selected_book_chapter_not_found' => '未找到所选的文档或章节',
     'guests_cannot_save_drafts' => '访客不能保存草稿',
 
     // Users
