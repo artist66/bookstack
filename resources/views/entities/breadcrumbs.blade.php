@@ -1,7 +1,7 @@
 <nav class="breadcrumbs text-center" aria-label="{{ trans('common.breadcrumb') }}">
     <?php $breadcrumbCount = 0; ?>
-
     {{-- Show top level books item --}}
+
     @if (count($crumbs) > 0 && ($crumbs[0] ?? null) instanceof  \BookStack\Entities\Models\Book)
         <a href="{{  url('/books')  }}" class="text-book icon-list-item outline-hover">
             <span>@icon('books')</span>
@@ -10,14 +10,6 @@
         <?php $breadcrumbCount++; ?>
     @endif
 
-    {{-- Show top level shelves item --}}
-    @if (count($crumbs) > 0 && ($crumbs[0] ?? null) instanceof  \BookStack\Entities\Models\Bookshelf)
-        <a href="{{  url('/shelves')  }}" class="text-bookshelf icon-list-item outline-hover">
-            <span>@icon('bookshelf')</span>
-            <span>{{ trans('entities.shelves') }}</span>
-        </a>
-        <?php $breadcrumbCount++; ?>
-    @endif
 
     @foreach($crumbs as $key => $crumb)
         <?php $isEntity = ($crumb instanceof \BookStack\Entities\Models\Entity); ?>

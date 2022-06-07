@@ -1,7 +1,4 @@
 <a href="{{ $shelf->getUrl() }}" class="shelf entity-list-item" data-entity-type="bookshelf" data-entity-id="{{$shelf->id}}">
-    <div class="entity-list-item-image bg-bookshelf @if($shelf->image_id) has-image @endif" style="background-image: url('{{ $shelf->getBookCover() }}')">
-        @icon('bookshelf')
-    </div>
     <div class="content py-xs">
         <h4 class="entity-list-item-name break-text">{{ $shelf->name }}</h4>
         <div class="entity-item-snippet">

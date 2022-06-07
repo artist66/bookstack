@@ -144,18 +144,9 @@
 
 @section('left')
 
-    @include('entities.search-form', ['label' => trans('entities.books_search_this')])
-
     @if($book->tags->count() > 0)
         <div class="mb-xl">
             @include('entities.tag-list', ['entity' => $book])
-        </div>
-    @endif
-
-    @if(count($bookParentShelves) > 0)
-        <div class="actions mb-xl">
-            <h5>{{ trans('entities.shelves_long') }}</h5>
-            @include('entities.list', ['entities' => $bookParentShelves, 'style' => 'compact'])
         </div>
     @endif
 
@@ -165,5 +156,7 @@
             @include('common.activity-list', ['activity' => $activity])
         </div>
     @endif
-@stop
 
+
+
+@stop

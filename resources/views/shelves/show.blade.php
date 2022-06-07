@@ -10,9 +10,7 @@
 @section('body')
 
     <div class="mb-s">
-        @include('entities.breadcrumbs', ['crumbs' => [
-            $shelf,
-        ]])
+
     </div>
 
     <main class="card content-wrap">
@@ -148,7 +146,3 @@
         </div>
     </div>
 @stop
-
-
-
-
