@@ -17,7 +17,7 @@
     @stack('social-meta')
 
     <!-- Styles and Fonts -->
-    <link rel="stylesheet" href="{{ versioned_asset('dist/styles-source.css') }}">
+    <link rel="stylesheet" href="{{ versioned_asset('dist/styles.css') }}">
     <link rel="stylesheet" media="print" href="{{ versioned_asset('dist/print-styles.css') }}">
     <link rel="icon" href="{{url('/favicon.png')}}" sizes="32x32">
 
