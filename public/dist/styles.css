@@ -2407,6 +2407,23 @@ body.page-content.mce-content-body {
   overflow: hidden
 }
 
+.mce-content-body [contentEditable=false][data-mce-selected]{
+  cursor: pointer !important;
+}
+#tinymce code-block{
+  position: relative;
+}
+#tinymce code-block:hover::before{
+  content: "双击打开代码编辑器";
+  display: block;
+  position: absolute;
+  right: 2px; top: 2px;
+  font-size: 14px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 .dark-mode .tox .tox-toolbar__primary, .dark-mode .tox .tox-menu, .dark-mode .tox .tox-dialog__header, .dark-mode .tox .tox-dialog, .dark-mode .tox .tox-dialog__footer, .dark-mode .tox .tox-pop__dialog, .dark-mode .tox.tox-tinymce-aux .tox-toolbar__overflow {
   background-color: #333
 }
