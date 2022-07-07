@@ -62,7 +62,7 @@ return [
     'book_not_found' => '未找到文档',
     'page_not_found' => '未找到页面',
     'chapter_not_found' => '未找到章节',
-    'selected_book_not_found' => '选中的书未找到',
+    'selected_book_not_found' => '选中的文档未找到',
     'selected_book_chapter_not_found' => '未找到所选的文档或章节',
     'guests_cannot_save_drafts' => '访客不能保存草稿',
 

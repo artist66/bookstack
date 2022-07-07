@@ -2420,6 +2420,7 @@ body.page-content.mce-content-body {
   right: 2px; top: 2px;
   font-size: 14px;
   padding: 4px 8px;
+  color: #ddd;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }

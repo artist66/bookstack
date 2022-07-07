@@ -85,7 +85,7 @@ return [
     'maint_send_test_email_mail_subject' => '测试电子邮件',
     'maint_send_test_email_mail_greeting' => '邮件发送功能看起来工作正常！',
     'maint_send_test_email_mail_text' => '恭喜！您收到了此邮件通知，您的电子邮件设置看起来已配置正确。',
-    'maint_recycle_bin_desc' => '被删除的合集、书籍、章节和页面会被存入回收站，您可以还原或永久删除它们。回收站中较旧的项目可能会在系统设置的一段时间后被自动删除。',
+    'maint_recycle_bin_desc' => '被删除的合集、文档、章节和页面会被存入回收站，您可以还原或永久删除它们。回收站中较旧的项目可能会在系统设置的一段时间后被自动删除。',
     'maint_recycle_bin_open' => '打开回收站',
 
     // Recycle Bin
@@ -152,7 +152,7 @@ return [
     'role_export_content' => '导出内容',
     'role_asset' => '资源许可',
     'roles_system_warning' => '请注意，拥有上述三个权限中的任何一个都可以允许用户更改自己的权限或系统中其他人的权限。 请只将拥有这些权限的角色分配给你信任的用户。',
-    'role_asset_desc' => '对系统内资源的默认访问许可将由这些权限控制。单独设置在书籍，章节和页面上的权限将覆盖这里的权限设定。',
+    'role_asset_desc' => '对系统内资源的默认访问许可将由这些权限控制。单独设置在文档，章节和页面上的权限将覆盖这里的权限设定。',
     'role_asset_admins' => '管理员可自动获得对所有内容的访问权限，但这些选项可能会显示或隐藏UI选项。',
     'role_all' => '全部的',
     'role_own' => '拥有的',
