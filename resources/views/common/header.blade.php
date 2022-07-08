@@ -29,8 +29,8 @@
                 <div class="links text-center">
                     @if (hasAppAccess())
                         <a class="hide-over-l" href="{{ url('/search') }}">@icon('search'){{ trans('common.search') }}</a>
-                        <a href="{{ url('/books/e3698/chapter/5f93f') }}"><img src="{{ url('/nav-icon-manual.png') }}"/><span>功能手册</span></a>
-                        <a href="{{ url('/shelves/a5bfc') }}"><img src="{{ url('/nav-icon-dev.png') }}"/><span>技术文档</span></a>
+                        <a href="{{ url('/books/1/chapter/5f93f') }}"><img src="{{ url('/nav-icon-manual.png') }}"/><span>功能手册</span></a>
+                        <a href="{{ url('/shelves/2') }}"><img src="{{ url('/nav-icon-dev.png') }}"/><span>技术文档</span></a>
                         @if(signedInUser() && userCan('settings-manage'))
                             <a href="{{ url('/settings') }}"><img src="{{ url('/nav-icon-settings.png') }}"/><span>{{ trans('settings.settings') }}</span></a>
                         @endif
