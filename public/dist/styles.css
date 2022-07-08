@@ -6,6 +6,7 @@ html {
   --text1: #222;
   --text2: #444;
   --text3: #575757;
+  --text4: #aaa;
   --card-bg-color: #fff;
   --border-color: #ddd;
   --color-page: #206ea7;
@@ -25,6 +26,7 @@ html.dark-mode{
   --text1: hsl(225, 8%, 92%);
   --text2: hsl(225, 7%, 83%);
   --text3: hsl(225, 6%, 70%);
+  --text4: hsl(225, 5%, 40%);
   --card-bg-color: #242633;
   --bg: #10111B;
   --bg2: rgba(0,0,0,.3);
@@ -195,7 +197,7 @@ small, p.small, span.small, .text-small {
 }
 
 html.dark-mode small, html.dark-mode p.small, html.dark-mode span.small, html.dark-mode .text-small {
-  color: #999
+  color: var(--text2);
 }
 
 sup, .superscript {
@@ -1077,7 +1079,7 @@ body.flexbox #content {
 }
 
 html.dark-mode .callout.success {
-  background-color: #031904
+  background-color: #031904;
 }
 
 html.dark-mode .callout.success {
@@ -1274,6 +1276,7 @@ html.dark-mode .card.drag-card .handle {
 
 html.dark-mode .grid-card {
   background: var(--bg2);
+  color: var(--text2);
 }
 
 .grid-card:hover {
@@ -1317,6 +1320,10 @@ html.dark-mode .grid-card:hover {
 .book-grid-item .grid-card-footer p.small {
   font-size: .8em;
   margin: 0
+}
+
+.dark-mode .grid-card-footer{
+  color: var(--text4) !important;
 }
 
 .content-wrap.card {
@@ -2188,7 +2195,6 @@ html.dark-mode .title-input.page-title {
 
 .description-input textarea {
   font-size: 14px;
-  color: #666;
   width: 100%
 }
 
@@ -3217,7 +3223,7 @@ html.dark-mode .CodeMirror-copy {
 }
 
 html.dark-mode [notification] {
-  background-color: #444
+  background-color: var(--card-bg-color);
 }
 
 [notification] span, [notification] svg {
@@ -3256,15 +3262,15 @@ html.dark-mode [notification] span {
 }
 
 [notification].pos {
-  color: #0f7d15
+  color: #3DCC49;
 }
 
 [notification].neg {
-  color: #ab0f0e
+  color: #FF6F6F
 }
 
 [notification].warning {
-  color: #cf4d03
+  color: #FF8156
 }
 
 [notification].showing {
@@ -4111,9 +4117,12 @@ header .links {
 
 header .links a{
   display: inline-flex;
-  padding: 16px;
-  color: rgba(255, 255, 255, 0.65);
+  padding: 16px 10px;
+  color: rgba(255, 255, 255, .6);
   justify-content: center; align-items: center;
+}
+header .links a:hover{
+  color: rgba(255, 255, 255, .8);
 }
 header .links a img{
   max-height: 100%;
@@ -4304,9 +4313,9 @@ html[dir=rtl] .mobile-menu-toggle {
 
   header .links a, header .dropdown-container ul li a, header .dropdown-container ul li button {
     text-align: start;
-    display: block;
+    display: flex;
+    justify-content: flex-start; align-items: center;
     padding: 12px 16px;
-    color: #444;
     color: #444
   }
 
@@ -4418,6 +4427,10 @@ html.dark-mode .tri-layout-mobile-tab {
   font-size: 1.6em;
   line-height: .8;
   margin: -2px 0 0
+}
+.breadcrumbs .separator path:first-child{
+  stroke: var(--text4);
+  fill: var(--text4);
 }
 
 .breadcrumbs:hover, .breadcrumbs:focus-within {
@@ -5343,6 +5356,7 @@ html.dark-mode .dropdown-menu a, html.dark-mode .dropdown-menu button {
 .dropdown-menu a svg, .dropdown-menu button svg {
   margin-inline-end: 12px;
   display: inline-block;
+  fill: var(--color-primary);
   width: 16px
 }
 
@@ -6261,11 +6275,11 @@ html.dark-mode .entity-selector .entity-list-item.selected {
 .list-sort-container .list-sort-label {
   font-weight: bold;
   display: inline-block;
-  color: #555
+  color: var(--text4);
 }
 
 html.dark-mode .list-sort-container .list-sort-label {
-  color: #888
+
 }
 
 .list-sort-container .list-sort-type {
